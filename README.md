@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digital consent journey (prototype)
 
-## Getting Started
-
-First, run the development server:
+A suggested solution for a digital pre-surgery information and consent journey, built with Next.js for an iPad Pro 11″ in portrait (834 CSS px wide).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev   # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path | What lives there |
+| --- | --- |
+| `app/page.tsx` | Landing page linking to both flows |
+| `app/pre-surgery/*` | Pre-surgery flow: welcome, 6 sections, done (designs `design/pre-surgery/0–7`) |
+| `app/consent/*` | Consent flow: welcome, 3 sections, done (designs `design/consent/8–12`) |
+| `content/` | **All page text.** One file per page, plus `shared.ts` for hospital, patient, operation and common labels |
+| `components/common/` | Building blocks reused across pages (header, toolbar, progress, panels, buttons, dialogs) |
+| `components/pre-surgery/<page>/`, `components/consent/<page>/` | Components belonging to a single page |
+| `lib/app-state.tsx` | Client-side state (text size, questions, confirmations, signature), saved in localStorage |
+| `lib/mock-api.ts` | Mocked submit/report/assistance calls; replace with real requests when a backend exists |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Change the text of a page in its own file under `content/` (e.g. `content/pre-surgery/risks.ts`). Patient and operation details shared by both flows are in `content/shared.ts`. In legal text, `**bold**` renders in bold.
