@@ -3,9 +3,9 @@ export const landingContent = {
   title: "Digital consent journey",
   lead: "A suggested solution for guiding patients from surgery information to informed, signed consent on a tablet.",
   points: [
-    "Two steps: the patient prepares before surgery, then gives consent after talking to their doctor.",
-    "Plain language, adjustable text size and read aloud make the information accessible.",
-    "Patients collect questions while reading, and the questions go to their doctor before consent.",
+    "Step 1: The patient is given information to prepare before surgery.",
+    "Step 2: The patient has an in-person meeting with their doctor to discuss the information and ask questions.",
+    "Step 3: The patient confirms understanding, reads the consent document, and signs.",
   ],
   flows: [
     {
@@ -18,7 +18,7 @@ export const landingContent = {
     },
     {
       href: "/consent",
-      step: "Step 2",
+      step: "Step 3",
       title: "Consent form",
       description: "Confirm understanding, read the consent in simple and legal terms, and sign.",
       cta: "Open consent form",
