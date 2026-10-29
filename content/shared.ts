@@ -4,10 +4,11 @@
  */
 
 export const hospital = {
-  name: "[Hospital name]",
+  name: "Munich ABC Hospital",
   department: "Department of General and Visceral Surgery",
   caseNumberLabel: "Case No.",
-  caseNumber: "[#######]",
+  caseNumber: "A123456789",
+  logoSrc: "/images/hospital-logo.png",
   logoAlt: "Hospital logo",
 };
 
