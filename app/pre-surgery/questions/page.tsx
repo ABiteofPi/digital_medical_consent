@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { FlowNav } from "@/components/common/FlowNav";
-import { MyQuestionsButton } from "@/components/common/MyQuestionsButton";
 import { PageSection, PageTitle } from "@/components/common/PageSection";
 import { PanelStack } from "@/components/common/Panel";
 import { StepProgress } from "@/components/common/StepProgress";
@@ -17,7 +16,6 @@ export const metadata: Metadata = { title: "Your questions · Pre-surgery form" 
 export default function QuestionsPage() {
   return (
     <>
-      <MyQuestionsButton />
       <StepProgress steps={preSurgerySteps} current={c.step} />
       <PageSection>
         <PageTitle title={c.title} lead={c.lead} />

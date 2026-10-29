@@ -20,6 +20,9 @@ export const preSurgerySteps = [
   { label: "Questions", href: preSurgeryRoutes.questions },
 ];
 
+/** Pages where the sticky "My Questions" button is not shown. */
+export const myQuestionsHiddenOn: string[] = [preSurgeryRoutes.done];
+
 export const reviewReturnBanner = {
   text: "You are reviewing information from your pre-surgery form.",
   action: "Return to consent",

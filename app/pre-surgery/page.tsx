@@ -1,5 +1,4 @@
 import { ButtonLink } from "@/components/common/Button";
-import { MyQuestionsButton } from "@/components/common/MyQuestionsButton";
 import { PageSection, PageTitle, Paragraphs } from "@/components/common/PageSection";
 import { CollectQuestionsPanel } from "@/components/pre-surgery/welcome/CollectQuestionsPanel";
 import { OverviewPanel } from "@/components/pre-surgery/welcome/OverviewPanel";
@@ -8,7 +7,6 @@ import { welcomeContent as c } from "@/content/pre-surgery/welcome";
 export default function PreSurgeryWelcomePage() {
   return (
     <>
-      <MyQuestionsButton />
       <PageSection className="pt-10">
         <PageTitle size="welcome" title={c.greeting} lead={c.subtitle} />
         <div className="mt-10 flex flex-col gap-4">

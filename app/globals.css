@@ -24,6 +24,8 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  /* Height of the sticky header area, set by <StickyChrome>. */
+  scroll-padding-top: var(--chrome-height, 0px);
 }
 
 body {

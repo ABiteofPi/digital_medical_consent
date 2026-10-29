@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { FlowNav } from "@/components/common/FlowNav";
-import { MyQuestionsButton } from "@/components/common/MyQuestionsButton";
 import { PageSection, PageTitle } from "@/components/common/PageSection";
 import { StepProgress } from "@/components/common/StepProgress";
 import { IndividualPlanPanel } from "@/components/pre-surgery/operation-timeline/IndividualPlanPanel";
@@ -13,7 +12,6 @@ export const metadata: Metadata = { title: "Operation timeline · Pre-surgery fo
 export default function OperationTimelinePage() {
   return (
     <>
-      <MyQuestionsButton />
       <StepProgress steps={preSurgerySteps} current={c.step} />
       <PageSection>
         <PageTitle title={c.title} />
